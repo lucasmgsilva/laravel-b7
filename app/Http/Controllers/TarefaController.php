@@ -6,27 +6,27 @@ use Illuminate\Http\Request;
 
 class TarefaController extends Controller
 {
-    public function index(){
-        return ('Oi');
+    public function list(){
+        return view('tarefas.list');
     }
 
-    public function create(){
-
+    public function add(){
+        return view('tarefas.add');
     }
 
-    public function store(Request $request){
+    public function addAction(Request $request){
 
     }
 
     public function edit(){
+        return view('tarefas.edit');
+    }
+
+    public function editAction(Request $request){
 
     }
 
-    public function update(Request $request){
-
-    }
-
-    public function destroy(){
+    public function del(){
 
     }
 
