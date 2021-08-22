@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql
--- Tempo de geração: 21-Ago-2021 às 15:08
+-- Tempo de geração: 21-Ago-2021 às 23:59
 -- Versão do servidor: 8.0.26
 -- versão do PHP: 7.4.20
 
@@ -34,6 +34,17 @@ CREATE TABLE `tarefas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
+-- Extraindo dados da tabela `tarefas`
+--
+
+INSERT INTO `tarefas` (`id`, `titulo`, `resolvido`) VALUES
+(1, 'Buscar criança na escola', 0),
+(2, 'Almoçar', 1),
+(3, 'Dormir', 0),
+(4, 'Estudar', 0),
+(5, 'Jantar', 0);
+
+--
 -- Índices para tabelas despejadas
 --
 
@@ -42,6 +53,16 @@ CREATE TABLE `tarefas` (
 --
 ALTER TABLE `tarefas`
   ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `tarefas`
+--
+ALTER TABLE `tarefas`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

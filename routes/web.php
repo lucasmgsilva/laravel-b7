@@ -19,15 +19,15 @@ Route::get('/', function () {
 });
 
 Route::prefix('tarefas')->group(function(){
-    Route::get('/', [TarefaController::class, 'list']);
+    Route::get('/', [TarefaController::class, 'list'])->name('tarefas.list');
     
-    Route::get('add', [TarefaController::class, 'add']);
+    Route::get('add', [TarefaController::class, 'add'])->name('tarefas.add');
     Route::post('add', [TarefaController::class, 'addAction']);
 
-    Route::get('edit/{id}', [TarefaController::class, 'edit']);
+    Route::get('edit/{id}', [TarefaController::class, 'edit'])->name('tarefas.edit');
     Route::post('edit/{id}', [TarefaController::class, 'editAction']);
     
-    Route::delete('delete/{id}', [TarefaController::class, 'del']);
+    Route::get('delete/{id}', [TarefaController::class, 'del'])->name('tarefas.del');
     
-    Route::get('marcar/{id}', [TarefaController::class, 'done']);
+    Route::get('marcar/{id}', [TarefaController::class, 'done'])->name('tarefas.done');
 });
