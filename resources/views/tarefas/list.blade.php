@@ -5,12 +5,6 @@
 @section('content')
     <h1>Listagem</h1>
 
-    @if (session('warning'))
-        <x-alert>
-            {{session('warning')}}
-        </x-alert>
-    @endif
-
     <a href="{{route('tarefas.add')}}">Adicionar Tarefa</a>
 
     @if (count($list) > 0)
