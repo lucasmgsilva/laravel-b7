@@ -65,8 +65,12 @@ class TarefaController extends Controller
         }
     }
 
-    public function del(){
+    public function del($id){
+        DB::delete('delete from tarefas where id = :id', [
+            'id' => $id
+        ]);
 
+        return redirect()->route('tarefas.list');
     }
 
     public function done(){

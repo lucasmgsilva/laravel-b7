@@ -16,7 +16,7 @@
                 </a>]
                 {{$item->titulo }}
                 [<a href="{{route('tarefas.edit', $item->id)}}">Editar</a>]
-                [<a href="{{route('tarefas.del', $item->id)}}">Excluir</a>]
+                [<a href="{{route('tarefas.del', $item->id)}}" onclick="return confirm('Você tem certeza que deseja excluir?')">Excluir</a>]
             </li>
         @endforeach
         </ul>
