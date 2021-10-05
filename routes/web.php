@@ -23,7 +23,7 @@ Route::prefix('tarefas')->group(function(){
     
     Route::get('add', [TarefaController::class, 'add'])->name('tarefas.add');
     Route::post('add', [TarefaController::class, 'addAction']);
-
+    
     Route::get('edit/{id}', [TarefaController::class, 'edit'])->name('tarefas.edit');
     Route::post('edit/{id}', [TarefaController::class, 'editAction']);
     
